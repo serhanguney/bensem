@@ -1,0 +1,27 @@
+@use '../variables/' as v;
+
+.titleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  max-width: 100px;
+  margin-left: -45px;
+  margin-top: 80px;
+
+  @include v.for-big-tablets {
+    grid-row: 2/-1;
+    grid-column: 1/2;
+    margin-left: -45px;
+    margin-top: 0;
+  }
+  h1 {
+    transform: rotateZ(90deg);
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+    @include v.for-big-tablets {
+      font-size: 120px;
+    }
+  }
+}

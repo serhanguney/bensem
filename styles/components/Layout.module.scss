@@ -1,0 +1,30 @@
+@use '../variables/' as v;
+.pageContainer {
+  @include v.page-layout {
+  }
+  .titleContainer {
+    @include v.layout-title {
+      @include v.for-big-tablets {
+        color: v.$primary-color;
+      }
+    }
+  }
+  .goToButton {
+    @include v.primary-button(white) {
+    }
+  }
+  .textContainer {
+    @include v.layout-text {
+      @include v.for-big-tablets {
+        color: v.$primary-color;
+      }
+    }
+  }
+  .additionalText {
+    @include v.layout-additional-text {
+      @include v.for-big-tablets {
+        color: v.$primary-color;
+      }
+    }
+  }
+}

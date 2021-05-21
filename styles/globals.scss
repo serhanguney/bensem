@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Syncopate:wght@400;700&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Syncopate";
+}
+
+a {
+  font-family: "Syncopate";
+  color: inherit;
+  text-decoration: none;
+}
+h1,
+h2,
+h3 {
+  font-family: "Syncopate";
+  font-weight: normal;
+}
+p,
+span,
+input,
+textarea {
+  font-family: "Michroma";
+}
+* {
+  box-sizing: border-box;
+}
+button {
+  font-family: "Syncopate";
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}

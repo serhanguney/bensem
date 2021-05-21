@@ -1,0 +1,107 @@
+@use './variables/' as v;
+
+.pageContainer {
+  @include v.page-layout {
+    padding: 0 20px 100px 20px;
+  }
+  @include v.for-big-tablets {
+    padding: 0;
+  }
+  .titleContainer {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    color: v.$primary-color;
+    padding: 20px;
+    text-align: left;
+    opacity: 0.4;
+    @include v.for-big-tablets {
+      display: none;
+    }
+    h1 {
+      font-weight: bold;
+      font-size: 22px;
+    }
+  }
+  .textContainer {
+    grid-column: 1/-1;
+    grid-row: 2/4;
+    color: v.$primary-color;
+    @include v.for-big-tablets {
+      grid-column: 3/8;
+      grid-row: 2/5;
+      margin-top: 80px;
+    }
+    .title {
+      font-size: 30px;
+      @include v.for-big-tablets {
+        font-size: 45px;
+      }
+    }
+    .paragraph {
+      font-size: 14px;
+      margin-top: 50px;
+      opacity: 0.7;
+      line-height: 30px;
+    }
+  }
+
+  .form {
+    grid-column: 1/-1;
+    grid-row: 4/6;
+    margin-top: 60px;
+    @include v.for-big-tablets {
+      grid-column: 3/8;
+      grid-row: 5/9;
+      margin-top: 0;
+    }
+    .formTitle {
+      color: v.$primary-color;
+      font-size: 20px;
+    }
+    .inputContainer {
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+      opacity: 0.6;
+      &:focus-within,
+      &:valid {
+        opacity: 1;
+      }
+      .input {
+        @include v.input-behaviour {
+          padding-top: 20px;
+          color: v.$primary-color;
+          min-height: inherit;
+          border-bottom: 1px solid v.$primary-color;
+          &::placeholder {
+            color: v.$primary-color;
+          }
+        }
+      }
+      .message {
+        @include v.input-behaviour {
+          color: v.$primary-color;
+          margin-top: 20px;
+          overflow: hidden;
+          height: 75px;
+          border-bottom: 1px solid v.$primary-color;
+          resize: none;
+          &::placeholder {
+            color: v.$primary-color;
+          }
+        }
+      }
+      svg {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .submitButton {
+      @include v.primary-button(v.$primary-color) {
+        margin-top: 40px;
+      }
+    }
+  }
+}
