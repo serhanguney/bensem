@@ -23,13 +23,12 @@ export default function contact() {
     exit: { opacity: 1 },
   };
   const variants = {
-    initial: (i) => ({ x: i * 40, opacity: 0 }),
+    initial: (i) => ({ x: i * 20, opacity: 0 }),
     animate: { x: 0, opacity: 1, transition: { duration: 0.6 } },
-    exit: (i) => ({ x: i * 40, opacity: 0, transition: { duration: 0.6 } }),
+    exit: (i) => ({ x: i * 20, opacity: 0, transition: { duration: 0.6 } }),
   };
 
   async function sendEmail(data) {
-    console.log(error);
     try {
       setIsLoading(true);
       const response = await fetch("/api/email", {
