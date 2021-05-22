@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-// import VisualBackground from "./components/VisualBackground";
 import TiltedTitle from "./components/TiltedTitle";
 
 const GlobalContext = createContext();
@@ -36,11 +35,22 @@ export default function Context({ children }) {
   };
   useEffect(() => {
     setWidth(window.innerWidth);
+
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
+    window.addEventListener("resize", function handleResize() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    });
+    return () => {
+      window.removeEventListener("resize", function handleResize() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+      });
+    };
   }, []);
   return (
-    <GlobalContext.Provider value={pageLayout}>
+    <GlobalContext.Provider value={{ pageLayout, width }}>
       {children}
     </GlobalContext.Provider>
   );

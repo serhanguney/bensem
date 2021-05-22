@@ -1,11 +1,14 @@
 import Context from "../Context";
 import "../styles/globals.scss";
+import { AnimatePresence } from "framer-motion";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
-    <Context>
-      <Component {...pageProps} />
-    </Context>
+    <AnimatePresence exitBeforeEnter>
+      <Context key={router.route}>
+        <Component {...pageProps} />
+      </Context>
+    </AnimatePresence>
   );
 }
 

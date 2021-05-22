@@ -7,7 +7,7 @@ import Title from "../components/Layout/Title";
 import { useGlobalContext } from "../Context";
 
 export default function Home() {
-  const pageLayout = useGlobalContext();
+  const { pageLayout } = useGlobalContext();
   const visualURL =
     "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1467&q=80";
 

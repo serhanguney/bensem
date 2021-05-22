@@ -33,82 +33,8 @@
   }
   @content;
 }
-@mixin layout-title {
-  grid-column: 1/-1;
-  grid-row: 1;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 20px;
-  text-align: left;
-  opacity: 0.6;
-  h1 {
-    font-weight: bold;
-    font-size: 22px;
-  }
-  @include for-big-tablets {
-    opacity: 1;
-    grid-row: 5/7;
-    grid-column: 3/9;
-    margin: 0;
-    h1 {
-      font-weight: normal;
-      font-size: 90px;
-      margin: 0;
-    }
-  }
-  @content;
-}
-@mixin layout-text {
-  grid-column: 1/-1;
-  grid-row: 2/3;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 0 20px;
-  opacity: 1;
-  h2 {
-    display: inline-block;
-    margin: 5px 0;
-    font-size: 30px;
-  }
-  @include for-big-tablets {
-    grid-row: 2/5;
-    margin-top: 70px;
-    margin-left: 80px;
-    grid-column: 3/8;
-    opacity: 0.3;
-
-    h2 {
-      display: inline-block;
-      font-size: 40px;
-      margin: 10px 0;
-      &:nth-of-type(2) {
-        margin-left: 20%;
-      }
-      &:nth-of-type(3) {
-        margin-left: 10%;
-      }
-    }
-  }
-  @content;
-}
-@mixin layout-additional-text {
-  grid-column: 1/-1;
-  grid-row: 3/4;
-  padding: 0 20px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  line-height: 25px;
-  color: rgba(255, 255, 255, 0.7);
-  @include for-big-tablets {
-    grid-column: 3/8;
-    grid-row: 7/9;
-
-    opacity: 0.2;
-    margin-top: 30px;
-    margin-left: 50px;
-  }
-  @content;
-}
 @mixin primary-button($mobile-color) {
-  will-change: color, background-color;
+  will-change: transform, color, background-color;
   grid-column: 1/-1;
   grid-row: 4/5;
   margin: 20px 0 0 auto;
@@ -121,21 +47,21 @@
   color: $mobile-color;
   background: none;
   border-radius: 0;
-  transition: all 150ms ease;
-  &:focus {
-    background-color: white;
-    color: #754f44;
-  }
-  @media (hover: hover) {
-    &:hover {
-      background-color: #754f44;
-      color: white;
-    }
-  }
+  // transition: all 150ms ease;
+  // &:focus {
+  //   background-color: white;
+  //   color: #754f44;
+  // }
+  // @media (hover: hover) {
+  //   &:hover {
+  //     background-color: #754f44;
+  //     color: white;
+  //   }
+  // }
   @include for-big-tablets {
     grid-row: 6/7;
-    grid-column: 3/9;
-    margin: 20px 0 0 20px;
+    grid-column: 3/8;
+    margin: 20px 0 0 25px;
     font-size: 24px;
     color: #754f44;
     border: 1px solid #754f44;
@@ -151,35 +77,5 @@
   outline: none;
   width: 100%;
   text-align: right;
-  @content;
-}
-@mixin label-layout {
-  position: relative;
-  display: block;
-  width: 100%;
-  min-height: inherit;
-  opacity: 0.4;
-  overflow: hidden;
-  pointer-events: none;
-  &::before {
-    content: "";
-    will-change: transform;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    transform: translateX(-100%);
-
-    transition: transform 300ms ease-in-out;
-  }
-
-  span {
-    will-change: transform;
-    display: inline-block;
-    font-size: 12px;
-
-    transform: translateY(20px) scale(1);
-    transition: transform 300ms ease;
-  }
   @content;
 }

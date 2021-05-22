@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "../styles/components/Menu.module.scss";
 
@@ -10,7 +10,6 @@ export default function Menu({ componentStyling }) {
     { path: "/digital", title: "Digital" },
     { path: "/contact", title: "Contact" },
   ];
-  console.log(componentStyling);
   return (
     <>
       <div className={`${styles.iconContainer} ${toggle ? styles.active : ""}`}>
@@ -33,8 +32,8 @@ export default function Menu({ componentStyling }) {
         <ul>
           {menuLinks.map((link) => (
             <li key={link.title}>
-              <Link href={link.path} onClick={() => setToggle(false)}>
-                <a>{link.title}</a>
+              <Link href={link.path}>
+                <a onClick={() => setToggle(false)}>{link.title}</a>
               </Link>
               <h1></h1>
             </li>

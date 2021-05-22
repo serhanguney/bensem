@@ -98,9 +98,29 @@
         transform: translateY(-50%);
       }
     }
+    .checkboxContainer {
+      text-align: right;
+      margin: 20px 0;
+      .terms {
+        display: inline-block;
+        width: fit-content;
+        font: 400 12px "Michroma";
+        color: v.$primary-color;
+        margin-left: auto;
+        text-align: right;
+        & + input[type="checkbox"] {
+          width: 15px;
+          height: 15px;
+          margin: 0;
+          margin-left: 10px;
+        }
+      }
+    }
+
     .submitButton {
       @include v.primary-button(v.$primary-color) {
         margin-top: 40px;
+        display: block;
       }
     }
   }

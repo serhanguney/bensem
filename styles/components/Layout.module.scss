@@ -3,28 +3,85 @@
   @include v.page-layout {
   }
   .titleContainer {
-    @include v.layout-title {
-      @include v.for-big-tablets {
-        color: v.$primary-color;
+    will-change: transform;
+    grid-column: 1/-1;
+    grid-row: 1;
+    width: fit-content;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    text-align: left;
+    opacity: 0.6;
+    h1 {
+      font-weight: bold;
+      font-size: 22px;
+    }
+    @include v.for-big-tablets {
+      opacity: 1;
+      grid-row: 5/7;
+      grid-column: 3/9;
+      margin: 0;
+      color: v.$primary-color;
+      h1 {
+        font-weight: normal;
+        font-size: 90px;
+        margin: 0;
       }
     }
   }
   .goToButton {
     @include v.primary-button(white) {
+      margin-right: 20px;
     }
   }
   .textContainer {
-    @include v.layout-text {
-      @include v.for-big-tablets {
-        color: v.$primary-color;
+    will-change: transform;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 20px;
+    opacity: 1;
+    h2 {
+      display: inline-block;
+      margin: 5px 0;
+      font-size: 30px;
+    }
+    @include v.for-big-tablets {
+      grid-row: 2/5;
+      margin-top: 70px;
+      margin-left: 80px;
+      grid-column: 3/8;
+      opacity: 0.3;
+      color: v.$primary-color;
+      h2 {
+        display: inline-block;
+        font-size: 40px;
+        margin: 10px 0;
+        &:nth-of-type(2) {
+          margin-left: 20%;
+        }
+        &:nth-of-type(3) {
+          margin-left: 10%;
+        }
       }
     }
   }
   .additionalText {
-    @include v.layout-additional-text {
-      @include v.for-big-tablets {
-        color: v.$primary-color;
-      }
+    will-change: transform;
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    padding: 0 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.7);
+    @include v.for-big-tablets {
+      grid-column: 3/8;
+      grid-row: 7/9;
+      color: v.$primary-color;
+      opacity: 0.2;
+      margin-top: 30px;
+      margin-left: 50px;
     }
   }
 }
