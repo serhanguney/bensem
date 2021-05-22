@@ -6,10 +6,10 @@ export default function Button() {
   const { width } = useGlobalContext();
   //note here that on mobile the animation changes direction.
   const variants = {
-    initial: { x: width < 620 ? -40 : 40, opacity: 0 },
+    initial: { x: width < 620 ? -20 : 20, opacity: 0 },
     animate: { x: 0, opacity: 1, transition: { duration: 0.6 } },
     exit: {
-      x: width < 620 ? -40 : 40,
+      x: width < 620 ? -20 : 20,
       opacity: 0,
       transition: { duration: 0.6 },
     },
