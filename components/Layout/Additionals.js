@@ -8,7 +8,7 @@ export default function Additionals({ children, klass = null }) {
     initial: { x: -40, opacity: 0 },
     animate: {
       x: 0,
-      opacity: width < 600 ? 0.6 : 0.3,
+      opacity: 0.9,
       transition: { duration: 0.6 },
     },
     exit: { x: -40, opacity: 0, transition: { duration: 0.6 } },

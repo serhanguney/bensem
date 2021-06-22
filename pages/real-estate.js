@@ -26,7 +26,8 @@ export default function realEstate() {
         <h2>real estate</h2>
       </TextContainer>
       <Additionals>
-        <p>{content[language].realEstate}</p>
+        <p>{content[language].realEstate.p1}</p>
+        <p>{content[language].realEstate.p2}</p>
       </Additionals>
       <Button />
     </Layout>

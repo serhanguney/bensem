@@ -26,7 +26,7 @@ export default function digital() {
         <h2>digital services</h2>
       </TextContainer>
       <Additionals>
-        <p>{content[language].digital}</p>
+        <p>{content[language].digital.p1}</p>
       </Additionals>
       <Button />
     </Layout>

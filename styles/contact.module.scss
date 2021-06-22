@@ -41,7 +41,6 @@
     }
     .paragraph {
       font-size: 14px;
-      margin-top: 50px;
       opacity: 0.7;
       line-height: 30px;
     }
@@ -53,8 +52,8 @@
     margin-top: 60px;
     @include v.for-big-tablets {
       grid-column: 3/8;
-      grid-row: 5/9;
-      margin-top: 0;
+      grid-row: 4/9;
+      margin-top: 60px;
     }
     .formTitle {
       color: v.$primary-color;

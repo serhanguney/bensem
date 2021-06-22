@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useGlobalContext } from "../Context";
 import styles from "../styles/contact.module.scss";

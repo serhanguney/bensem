@@ -4,7 +4,15 @@
         "digital": "Our services include creating presentational websites for individuals and companies. We aim for individuals and companies who look for professional representation of themselves."
     },
     "en" :{
-        "realEstate" :"We are interested to purchase apartments and offer them for singles (e.g. students) or families who live in modest circumstances to make living possible also for them. Our Goal is, to offer affordable housing for humble people! if you want to sell your apartment or you know someone who wants to sell his apartment let us know and get 5000EUR for this hint and if it ends to a purchase agreement!",
-        "digital": "Our services include creating presentational websites for individuals and companies. We aim for individuals and companies who look for professional representation of themselves."
+        "homepage": {
+            "p1": "Bensem focuses on web development services as well as real-estate opportunities. For those of you who are looking for a website to present their company, or who are looking for affordable quality housing we offer our services."
+        },
+        "realEstate" :{
+            "p1":"We are interested to purchase apartments and offer them for singles (e.g. students) or families who live in modest circumstances to make living possible also for them. Our Goal is, to offer affordable housing for humble people!",
+            "p2": "If you want to sell your apartment or you know someone who wants to sell his apartment let us know and get 5000EUR for this hint upon signing the purchase agreement!"
+        },
+        "digital": {
+            "p1" :"Our services include creating presentational websites for individuals and companies. We aim for individuals and companies who look for professional representation of themselves."
+        }
     }
 }
