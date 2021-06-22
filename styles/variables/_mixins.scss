@@ -26,10 +26,12 @@
   justify-content: flex-end;
   z-index: 1;
   text-align: right;
+  padding-bottom: 100px;
   @include for-big-tablets {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(8, 1fr);
     text-align: unset;
+    padding-bottom: 0;
   }
   @content;
 }
