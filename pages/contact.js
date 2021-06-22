@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useGlobalContext } from "../Context";
 import styles from "../styles/contact.module.scss";
@@ -12,6 +12,7 @@ export default function contact() {
   const { register, handleSubmit, reset, error } = useForm();
   const { pageLayout } = useGlobalContext();
   const [isLoading, setIsLoading] = useState(false);
+  const [isAgreed, setIsAgreed] = useState(false);
   const formFields = [
     { name: "name", message: "Please enter your name", icon: <Info /> },
     { name: "email", message: "Please enter your email", icon: <Email /> },
@@ -19,7 +20,7 @@ export default function contact() {
   //animation variants
   const parentVariants = {
     initial: { opacity: 1 },
-    animate: { opacity: 1 },
+    animate: { opacity: 1, transition: { delayChildren: 0.5 } },
     exit: { opacity: 1 },
   };
   const variants = {
@@ -29,6 +30,9 @@ export default function contact() {
   };
 
   async function sendEmail(data) {
+    if (!isAgreed) {
+      return;
+    }
     try {
       setIsLoading(true);
       const response = await fetch("/api/email", {
@@ -123,6 +127,8 @@ export default function contact() {
               {...register("terms", {
                 required: "Make sure to agree to terms",
               })}
+              value={isAgreed}
+              onChange={(e) => setIsAgreed(e.target.checked)}
             />
           </div>
           <button

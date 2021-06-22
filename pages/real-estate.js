@@ -5,8 +5,10 @@ import Button from "../components/Layout/Button";
 import TextContainer from "../components/Layout/TextContainer";
 import Title from "../components/Layout/Title";
 
+import content from "../content";
+
 export default function realEstate() {
-  const { pageLayout } = useGlobalContext();
+  const { pageLayout, language } = useGlobalContext();
   const visualURL =
     "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1467&q=80";
   return (
@@ -21,20 +23,10 @@ export default function realEstate() {
       )}
       <Title />
       <TextContainer>
-        <h2>housing</h2>
-        <br />
-        <h2>{`&`}</h2>
-        <br />
-        <h2>
-          digital <br />
-          services{" "}
-        </h2>
+        <h2>real estate</h2>
       </TextContainer>
       <Additionals>
-        <p>
-          Our services include creating presentational websites for individuals
-          and companies
-        </p>
+        <p>{content[language].realEstate}</p>
       </Additionals>
       <Button />
     </Layout>

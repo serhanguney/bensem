@@ -30,8 +30,8 @@ export default function Home() {
         },
         { url: visualURL, mobile: true }
       )}
-      <Title />
-      <TextContainer>
+      <Title klass="homepageTitle" />
+      <TextContainer klass="homepageText">
         <h2>housing</h2>
         <br />
         <h2>{`&`}</h2>
@@ -41,13 +41,13 @@ export default function Home() {
           services{" "}
         </h2>
       </TextContainer>
-      <Additionals>
+      <Additionals klass="homepageAdditionalText">
         <p>
           Our services include creating presentational websites for individuals
           and companies
         </p>
       </Additionals>
-      <Button />
+      <Button klass="homepageGoToButton" />
     </Layout>
   );
 }

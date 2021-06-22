@@ -35,8 +35,6 @@
 }
 @mixin primary-button($mobile-color) {
   will-change: transform, color, background-color;
-  grid-column: 1/-1;
-  grid-row: 4/5;
   margin: 20px 0 0 auto;
   width: 160px;
   height: 55px;
@@ -59,8 +57,6 @@
   //   }
   // }
   @include for-big-tablets {
-    grid-row: 6/7;
-    grid-column: 3/8;
     margin: 20px 0 0 25px;
     font-size: 24px;
     color: #754f44;

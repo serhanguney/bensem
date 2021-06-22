@@ -8,6 +8,7 @@ export const useGlobalContext = () => useContext(GlobalContext);
 
 export default function Context({ children }) {
   const [width, setWidth] = useState();
+  const [language, setLanguage] = useState("en");
   const Navbar = dynamic(() => import("./components/Navbar"));
   const Menu = dynamic(() => import("./components/Menu"));
   const VisualBackground = dynamic(() =>
@@ -50,7 +51,9 @@ export default function Context({ children }) {
     };
   }, []);
   return (
-    <GlobalContext.Provider value={{ pageLayout, width }}>
+    <GlobalContext.Provider
+      value={{ pageLayout, width, language, setLanguage }}
+    >
       {children}
     </GlobalContext.Provider>
   );

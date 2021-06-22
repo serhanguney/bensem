@@ -22,13 +22,6 @@ export default function digital() {
       <Title />
       <TextContainer>
         <h2>housing</h2>
-        <br />
-        <h2>{`&`}</h2>
-        <br />
-        <h2>
-          digital <br />
-          services{" "}
-        </h2>
       </TextContainer>
       <Additionals>
         <p>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "../../styles/components/Layout.module.scss";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import { useGlobalContext } from "../../Context";
-export default function Button() {
+export default function Button({ klass }) {
   const { width } = useGlobalContext();
   //note here that on mobile the animation changes direction.
   const variants = {
@@ -18,7 +18,7 @@ export default function Button() {
     <LazyMotion features={domAnimation}>
       <Link href="/contact">
         <m.a
-          className={styles.goToButton}
+          className={`${styles.goToButton} ${klass ? styles[klass] : ""}`}
           variants={variants}
           whileHover={{
             backgroundColor: "#754f44",
