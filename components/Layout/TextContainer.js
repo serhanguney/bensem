@@ -1,5 +1,5 @@
 import styles from "../../styles/components/Layout.module.scss";
-import { domAnimation, LazyMotion, m } from "framer-motion";
+import { m } from "framer-motion";
 export default function TextContainer({ children, klass = null }) {
   const variants = {
     initial: { x: -40, opacity: 0 },
@@ -7,13 +7,11 @@ export default function TextContainer({ children, klass = null }) {
     exit: { x: -40, opacity: 0, transition: { duration: 0.6 } },
   };
   return (
-    <LazyMotion features={domAnimation}>
-      <m.div
-        className={`${styles.textContainer} ${klass ? styles[klass] : ""}`}
-        variants={variants}
-      >
-        {children}
-      </m.div>
-    </LazyMotion>
+    <m.div
+      className={`${styles.textContainer} ${klass ? styles[klass] : ""}`}
+      variants={variants}
+    >
+      {children}
+    </m.div>
   );
 }

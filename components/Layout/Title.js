@@ -1,5 +1,5 @@
 import styles from "../../styles/components/Layout.module.scss";
-import { domAnimation, LazyMotion, m } from "framer-motion";
+import { m } from "framer-motion";
 export default function Title({ klass = null }) {
   const variants = {
     initial: { x: 40, opacity: 0 },
@@ -11,13 +11,11 @@ export default function Title({ klass = null }) {
     },
   };
   return (
-    <LazyMotion features={domAnimation}>
-      <m.div
-        className={`${styles.titleContainer} ${klass ? styles[klass] : ""}`}
-        variants={variants}
-      >
-        <h1>bensem</h1>
-      </m.div>
-    </LazyMotion>
+    <m.div
+      className={`${styles.titleContainer} ${klass ? styles[klass] : ""}`}
+      variants={variants}
+    >
+      <h1>bensem</h1>
+    </m.div>
   );
 }

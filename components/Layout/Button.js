@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "../../styles/components/Layout.module.scss";
-import { domAnimation, LazyMotion, m } from "framer-motion";
+import { m } from "framer-motion";
 import { useGlobalContext } from "../../Context";
 export default function Button({ klass }) {
   const { width } = useGlobalContext();
@@ -15,25 +15,23 @@ export default function Button({ klass }) {
     },
   };
   return (
-    <LazyMotion features={domAnimation}>
-      <Link href="/contact">
-        <m.a
-          className={`${styles.goToButton} ${klass ? styles[klass] : ""}`}
-          variants={variants}
-          whileHover={{
-            backgroundColor: "#754f44",
-            color: "white",
-            transition: { duration: 0.1 },
-          }}
-          whileFocus={{
-            backgroundColor: "white",
-            color: "#754f44",
-            transition: { duration: 0.1 },
-          }}
-        >
-          Contact
-        </m.a>
-      </Link>
-    </LazyMotion>
+    <Link href="/contact">
+      <m.a
+        className={`${styles.goToButton} ${klass ? styles[klass] : ""}`}
+        variants={variants}
+        whileHover={{
+          backgroundColor: "#754f44",
+          color: "white",
+          transition: { duration: 0.1 },
+        }}
+        whileFocus={{
+          backgroundColor: "white",
+          color: "#754f44",
+          transition: { duration: 0.1 },
+        }}
+      >
+        Contact
+      </m.a>
+    </Link>
   );
 }
