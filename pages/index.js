@@ -33,10 +33,6 @@ export default function Home() {
       )}
       <Title klass="homepageTitle" />
       <TextContainer klass="homepageText">
-        <h2>housing</h2>
-        <br />
-        <h2>{`&`}</h2>
-        <br />
         <h2>
           digital <br />
           services{" "}
