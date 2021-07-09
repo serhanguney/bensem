@@ -25,6 +25,7 @@ export default function contact() {
     animate: { x: 0, opacity: 1, transition: { duration: 0.6 } },
     exit: (i) => ({ x: i * 20, opacity: 0, transition: { duration: 0.6 } }),
   };
+  console.log("deployed to vercel");
   async function sendEmail(data) {
     if (!isAgreed) {
       return;
