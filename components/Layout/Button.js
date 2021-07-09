@@ -21,11 +21,11 @@ export default function Button({ klass }) {
         variants={variants}
         whileHover={{
           backgroundColor: "#754f44",
-          color: "white",
+          color: "#ffffff",
           transition: { duration: 0.1 },
         }}
         whileFocus={{
-          backgroundColor: "white",
+          backgroundColor: "#ffffff",
           color: "#754f44",
           transition: { duration: 0.1 },
         }}

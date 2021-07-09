@@ -8,10 +8,11 @@ import Message from "../components/SVG/message";
 import Email from "../components/SVG/email";
 import { m } from "framer-motion";
 import Layout from "../components/Layout/Layout";
+import content from "../content/index.json";
 
 export default function contact() {
   const { register, handleSubmit, reset } = useForm();
-  const { pageLayout } = useGlobalContext();
+  const { pageLayout, language } = useGlobalContext();
   const [isLoading, setIsLoading] = useState(false);
   const [isAgreed, setIsAgreed] = useState(false);
   const formFields = [
@@ -24,11 +25,11 @@ export default function contact() {
     animate: { x: 0, opacity: 1, transition: { duration: 0.6 } },
     exit: (i) => ({ x: i * 20, opacity: 0, transition: { duration: 0.6 } }),
   };
-
   async function sendEmail(data) {
     if (!isAgreed) {
       return;
     }
+
     try {
       setIsLoading(true);
       const response = await fetch("/api/email", {
@@ -38,7 +39,8 @@ export default function contact() {
         },
         body: JSON.stringify(data),
       });
-      console.log(response.json());
+      const result = await response.text();
+      console.log("request result", result);
       reset();
       setIsLoading(false);
     } catch (error) {
@@ -65,12 +67,8 @@ export default function contact() {
         <h1>bensem</h1>
       </m.div>
       <m.div className={styles.textContainer} variants={variants} custom={-1}>
-        <h1 className={styles.title}>contact</h1>
-        <p className={styles.paragraph}>
-          If you are looking for affordable housing, or If you care about the
-          quality of your company’s digital first impression send us a message
-          and lets discuss.
-        </p>
+        <h1 className={styles.title}>{content[language].contact.title}</h1>
+        <p className={styles.paragraph}>{content[language].contact.p1}</p>
       </m.div>
 
       <m.form
@@ -107,7 +105,7 @@ export default function contact() {
         </div>
         <div className={styles.checkboxContainer}>
           <label htmlFor="terms" className={styles.terms}>
-            I consent to my private information being shared
+            {content[language].contact.consent}
           </label>
           <input
             type="checkbox"
@@ -124,7 +122,7 @@ export default function contact() {
           type="submit"
           disabled={isLoading}
         >
-          send
+          {content[language].contact.button}
         </button>
       </m.form>
 

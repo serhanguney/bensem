@@ -13,6 +13,12 @@
         },
         "digital": {
             "p1" :"Our services include creating presentational websites for individuals and companies. We aim for individuals and companies who look for professional representation of themselves."
+        },
+        "contact": {
+            "title": "contact",
+            "p1": "If you are looking for affordable housing, or If you care about the quality of your company’s digital first impression send us a message and lets discuss.",
+            "consent": "I consent to my private information being shared",
+            "button": "send"
         }
     }
 }
