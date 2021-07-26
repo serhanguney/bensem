@@ -25,7 +25,6 @@ export default function contact() {
     animate: { x: 0, opacity: 1, transition: { duration: 0.6 } },
     exit: (i) => ({ x: i * 20, opacity: 0, transition: { duration: 0.6 } }),
   };
-  console.log("deployed to vercel");
   async function sendEmail(data) {
     if (!isAgreed) {
       return;
@@ -33,7 +32,7 @@ export default function contact() {
 
     try {
       setIsLoading(true);
-      const response = await fetch("/api/email", {
+      const response = await fetch("https://www.bensem.eu/api/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
