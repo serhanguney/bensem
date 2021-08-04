@@ -32,7 +32,7 @@ export default function contact() {
 
     try {
       setIsLoading(true);
-      const response = await fetch("https://www.bensem.eu/api/email", {
+      const response = await fetch("/api/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
