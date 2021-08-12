@@ -3,51 +3,52 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useGlobalContext } from "../Context";
 import styles from "../styles/contact.module.scss";
-import Info from "../components/SVG/info";
-import Message from "../components/SVG/message";
+import Info from "../components/SVG/location";
+import Location from "../components/SVG/location";
+import Phone from "../components/SVG/phone";
 import Email from "../components/SVG/email";
 import { m } from "framer-motion";
 import Layout from "../components/Layout/Layout";
 import content from "../content/index.json";
 
 export default function contact() {
-  const { register, handleSubmit, reset } = useForm();
+  // const { register, handleSubmit, reset } = useForm();
   const { pageLayout, language } = useGlobalContext();
-  const [isLoading, setIsLoading] = useState(false);
-  const [isAgreed, setIsAgreed] = useState(false);
-  const formFields = [
-    { name: "name", message: "Please enter your name", icon: <Info /> },
-    { name: "email", message: "Please enter your email", icon: <Email /> },
-  ];
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [isAgreed, setIsAgreed] = useState(false);
+  // const formFields = [
+  //   { name: "fullName", message: "Please enter your name", icon: <Info /> },
+  //   { name: "email", message: "Please enter your email", icon: <Email /> },
+  // ];
   //animation variants
   const variants = {
     initial: (i) => ({ x: i * 20, opacity: 0 }),
     animate: { x: 0, opacity: 1, transition: { duration: 0.6 } },
     exit: (i) => ({ x: i * 20, opacity: 0, transition: { duration: 0.6 } }),
   };
-  async function sendEmail(data) {
-    if (!isAgreed) {
-      return;
-    }
+  // async function sendEmail(data) {
+  //   if (!isAgreed) {
+  //     return;
+  //   }
 
-    try {
-      setIsLoading(true);
-      const response = await fetch("/api/email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      const result = await response.text();
-      console.log("request result", result);
-      reset();
-      setIsLoading(false);
-    } catch (error) {
-      setIsLoading(false);
-      console.log(error);
-    }
-  }
+  //   try {
+  //     setIsLoading(true);
+  //     const response = await fetch("/api/email", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(data),
+  //     });
+  //     const result = await response.text();
+  //     console.log("request result", result);
+  //     reset();
+  //     setIsLoading(false);
+  //   } catch (error) {
+  //     setIsLoading(false);
+  //     console.log(error);
+  //   }
+  // }
   return (
     <Layout pageStyle={styles.pageContainer}>
       <Head>
@@ -70,8 +71,14 @@ export default function contact() {
         <h1 className={styles.title}>{content[language].contact.title}</h1>
         <p className={styles.paragraph}>{content[language].contact.p1}</p>
       </m.div>
-
-      <m.form
+      <m.div className={styles.contactInfo}>
+        <p className={styles.message}>info@bensem.eu</p>
+        <p className={styles.phone}>+490773621774</p>
+        <p className={styles.location}>
+          <span>Rehorova 1004/32, 13000, Praha, Czechia</span>
+        </p>
+      </m.div>
+      {/* <m.form
         method="post"
         className={styles.form}
         onSubmit={handleSubmit((data) => sendEmail(data))}
@@ -124,7 +131,7 @@ export default function contact() {
         >
           {content[language].contact.button}
         </button>
-      </m.form>
+      </m.form> */}
 
       <style jsx>
         {`
