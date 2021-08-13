@@ -1,7 +1,21 @@
 {
     "de":{
-        "realEstate" : "Wir sind an Immobilien (bezahlbaren Wohnraum) interessiert. Unser Ziel ist es insbesondere hilfebeduerftigen Menschen wie z. B. Alleinstehende (Studenten), Alleinerziehene oder Familien mit geringem Einkommen, mit Migrationshintergrund ein zufriedenstellendes Wohnen zu ermoeglichen! Wenn Sie mit dem Gedanken spielen Ihre Immobilie zu verkaufen oder Sie kennen jemanden, der seine Immobilie verkaufen moechte, dann lassen Sie es uns bitte wissen. Wenn durch Ihren Hinweis ein notarieller Vertrag zustande gekommen ist dann zahlen wir Ihnen gerne eine Tip-Provision von 5000,- EUR!",
-        "digital": "Our services include creating presentational websites for individuals and companies. We aim for individuals and companies who look for professional representation of themselves."
+        "homepage": {
+            "p1": "Bensem focuses on web development services. For those of you who are looking for a website to present their company we offer our services."
+        },
+        "realEstate" : {
+            "p1": "Wir sind an Immobilien (bezahlbaren Wohnraum) interessiert. Unser Ziel ist es insbesondere hilfebeduerftigen Menschen wie z. B. Alleinstehende (Studenten), Alleinerziehene oder Familien mit geringem Einkommen, mit Migrationshintergrund ein zufriedenstellendes Wohnen zu ermoeglichen! ",
+            "p2": "Wenn Sie mit dem Gedanken spielen Ihre Immobilie zu verkaufen oder Sie kennen jemanden, der seine Immobilie verkaufen moechte, dann lassen Sie es uns bitte wissen. Wenn durch Ihren Hinweis ein notarieller Vertrag zustande gekommen ist dann zahlen wir Ihnen gerne eine Tip-Provision von 5000,- EUR!"
+        },
+        "digital": {
+            "p1" :"Our services include creating presentational websites for individuals and companies. We aim for individuals and companies who look for professional representation of themselves."
+        },
+        "contact": {
+            "title": "contact",
+            "p1": "If you are looking for affordable housing, or If you care about the quality of your company’s digital first impression send us a message and lets discuss.",
+            "consent": "I consent to my private information being shared",
+            "button": "send"
+        }
     },
     "en" :{
         "homepage": {

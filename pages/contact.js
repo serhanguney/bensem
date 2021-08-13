@@ -71,7 +71,7 @@ export default function contact() {
         <h1 className={styles.title}>{content[language].contact.title}</h1>
         <p className={styles.paragraph}>{content[language].contact.p1}</p>
       </m.div>
-      <m.div className={styles.contactInfo}>
+      <m.div className={styles.contactInfo} variants={variants} custom={1}>
         <p className={styles.message}>info@bensem.eu</p>
         <p className={styles.phone}>+490773621774</p>
         <p className={styles.location}>

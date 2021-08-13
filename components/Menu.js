@@ -1,15 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/components/Menu.module.scss";
+import { useGlobalContext } from "../Context";
 
 export default function Menu({ componentStyling }) {
   const [toggle, setToggle] = useState(false);
+  const { setLanguage } = useGlobalContext();
   const menuLinks = [
     { path: "/", title: "Home" },
     { path: "/real-estate", title: "Real Estate" },
     { path: "/digital", title: "Digital" },
     { path: "/contact", title: "Contact" },
   ];
+
+  function handleLanguage(e) {
+    setToggle(false);
+    setLanguage(e.target.innerHTML.toLowerCase());
+  }
   return (
     <>
       <div className={`${styles.iconContainer} ${toggle ? styles.active : ""}`}>
@@ -38,6 +45,10 @@ export default function Menu({ componentStyling }) {
               <h1></h1>
             </li>
           ))}
+          <li className={styles.languages}>
+            <button onClick={(e) => handleLanguage(e)}>EN</button>
+            <button onClick={(e) => handleLanguage(e)}>DE</button>
+          </li>
         </ul>
       </div>
       <style jsx>{`

@@ -128,13 +128,13 @@
   // }
   .contactInfo {
     color: v.$primary-color;
-    opacity: 0.6;
     grid-column: 1/-1;
     grid-row: 4/5;
     padding: 20px 0;
     p {
       position: relative;
       font-size: 14px;
+      opacity: 0.8;
       &::after {
         content: "";
         display: inline-block;
@@ -145,7 +145,7 @@
       span {
         position: absolute;
         left: 0;
-        width: 85%;
+        width: 89%;
       }
     }
     .message {
