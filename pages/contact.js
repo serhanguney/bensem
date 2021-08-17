@@ -73,9 +73,9 @@ export default function contact() {
       </m.div>
       <m.div className={styles.contactInfo} variants={variants} custom={1}>
         <p className={styles.message}>info@bensem.eu</p>
-        <p className={styles.phone}>+490773621774</p>
+        <p className={styles.phone}>+49 176 43404894</p>
         <p className={styles.location}>
-          <span>Rehorova 1004/32, 13000, Praha, Czechia</span>
+          <span>Johanniterstr. 5 74177 Bad Friedrichshall Germany</span>
         </p>
       </m.div>
       {/* <m.form
