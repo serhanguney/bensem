@@ -44,17 +44,6 @@ export default function contact() {
           <span>Johanniterstr. 5 74177 Bad Friedrichshall Germany</span>
         </p>
       </m.div>
-
-      <style jsx>
-        {`
-          .input {
-            min-height: 60px;
-          }
-          .message {
-            min-height: 100px;
-          }
-        `}
-      </style>
     </Layout>
   );
 }
