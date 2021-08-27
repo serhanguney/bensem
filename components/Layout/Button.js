@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "../../styles/components/Layout.module.scss";
 import { m } from "framer-motion";
 import { useGlobalContext } from "../../Context";
-export default function Button({ klass }) {
+export default function Button({ klass, text = "Contact" }) {
   const { width } = useGlobalContext();
   //note here that on mobile the animation changes direction.
   const variants = {
@@ -15,7 +15,7 @@ export default function Button({ klass }) {
     },
   };
   return (
-    <Link href="/contact">
+    <Link href={`${text.toLowerCase()}`}>
       <m.a
         className={`${styles.goToButton} ${klass ? styles[klass] : ""}`}
         variants={variants}
@@ -30,7 +30,7 @@ export default function Button({ klass }) {
           transition: { duration: 0.1 },
         }}
       >
-        Contact
+        {text}
       </m.a>
     </Link>
   );

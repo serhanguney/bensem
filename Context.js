@@ -8,7 +8,7 @@ export const useGlobalContext = () => useContext(GlobalContext);
 
 export default function Context({ children }) {
   const [width, setWidth] = useState();
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("de");
   const Navbar = dynamic(() => import("./components/Navbar"));
   const Menu = dynamic(() => import("./components/Menu"));
   const VisualBackground = dynamic(() =>
@@ -22,12 +22,12 @@ export default function Context({ children }) {
         {width && width > 960 ? (
           <>
             <Navbar />
-            {visual.url && <VisualBackground url={visual.url} />}
+            {visual?.url && <VisualBackground url={visual.url} />}
           </>
         ) : (
           <>
             <Menu componentStyling={menuStyle} />
-            {visual.mobile && <VisualBackground url={visual.url} />}
+            {visual?.mobile && <VisualBackground url={visual.url} />}
           </>
         )}
         <TiltedTitle />

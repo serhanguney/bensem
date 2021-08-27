@@ -110,4 +110,21 @@
       }
     }
   }
+  .impressum {
+    color: v.$primary-color;
+    grid-column: 1/-1;
+    grid-row: 5/6;
+    padding: 20px 0;
+    a {
+      @include v.primary-button(v.$primary-color) {
+        display: block;
+        width: fit-content;
+        padding: 0 20px;
+      }
+    }
+    @include v.for-big-tablets {
+      grid-row: 6/7;
+      grid-column: 3/8;
+    }
+  }
 }

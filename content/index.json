@@ -1,20 +1,18 @@
 {
     "de":{
         "homepage": {
-            "p1": "Bensem focuses on web development services. For those of you who are looking for a website to present their company we offer our services."
+            "p1": "benSem konzentriert sich auf webbasierte Dienstleistungen. Wir bieten unsere Dienste allen an, die sich auf der Suche nach einer ansprechenden und modernen Webseite befinden."
         },
         "realEstate" : {
-            "p1": "Wir sind an Immobilien (bezahlbaren Wohnraum) interessiert. Unser Ziel ist es insbesondere hilfebeduerftigen Menschen wie z. B. Alleinstehende (Studenten), Alleinerziehene oder Familien mit geringem Einkommen, mit Migrationshintergrund ein zufriedenstellendes Wohnen zu ermoeglichen! ",
-            "p2": "Wenn Sie mit dem Gedanken spielen Ihre Immobilie zu verkaufen oder Sie kennen jemanden, der seine Immobilie verkaufen moechte, dann lassen Sie es uns bitte wissen. Wenn durch Ihren Hinweis ein notarieller Vertrag zustande gekommen ist dann zahlen wir Ihnen gerne eine Tip-Provision von 5000,- EUR!"
+            "p1": "Wir interessieren uns an Immobilien und möchten diese auch gerne an Alleinstehende, Studenten oder finanziell benachteiligte Menschen u. Familien vermitteln. Es bereitet uns immer wieder eine große Freude auch diesen Mitmenschen einen bezahlbaren Wohnraum zu ermöglichen!",
+            "p2": "Besitzen Sie eine Immobilie die Sie verkaufen möchten oder kennen jemanden der eine Immobilie verkaufen möchte, dann lassen Sie es uns bitte wissen. Für Ihren Hinweis würden wir Sie natürlich auch großzügig honorieren, sofern ein notarieller Kaufvertrag zustande gekommen ist."
         },
         "digital": {
-            "p1" :"Unsere Dienstleistungen beinhalten vorzeigbare und moderne Webseiten für Individualisten und Unternehmer. Unser Ziel ist es, Sie als Person oder Ihr Unternehmen im World Wide Web zu präsentieren."
+            "p1" :"Unsere Dienstleistungen bestehen darin, ansprechende auf modernen Techniken basierende Webseiten für Individuelle und Unternehmer zu entwerfen. Lassen Sie uns gemeinsam Sie selbst oder Ihr Unternehmen gemäß Ihren Wünschen präsentieren."
         },
         "contact": {
             "title": "contact",
-            "p1": "If you are looking for affordable housing, or If you care about the quality of your company’s digital first impression send us a message and lets discuss.",
-            "consent": "I consent to my private information being shared",
-            "button": "send"
+            "p1": "Haben wir mit unseren Dienstleistungen Ihr Interesse geweckt, dann zögern Sie nicht. Gerne können wir unverbindlich über Ihre Wünsche und Vorhaben sprechen."
         }
     },
     "en" :{
@@ -30,9 +28,53 @@
         },
         "contact": {
             "title": "contact",
-            "p1": "If you are looking for affordable housing, or If you care about the quality of your company’s digital first impression send us a message and lets discuss.",
-            "consent": "I consent to my private information being shared",
-            "button": "send"
+            "p1": "If you are looking for affordable housing, or If you care about the quality of your company’s digital first impression send us a message and lets discuss."
         }
-    }
+    },
+    "impressum": [
+        {
+            "title":"Angaben gemäß § 5 TMG:",
+            "text": "benSem services GmbH Johanniterstr. 5 74177 Bad Friedrichshall"
+        },
+        {
+            "title":"Vertreten durch:",
+            "text": "Geschäftsführer: Daniel Ünsac"
+        },
+        {
+            "title":"Kontakt:",
+            "text": "Telefon: +49 (0) 176 43404894 - Email: info@bensem.eu"
+        },
+        {
+            "title":"Registereintrag:",
+            "text": "Eintragung im Handelsregister. - Registergericht: Amtsgericht Stuttgart - Registernummer: HRB 779110"
+        },
+        {
+            "title":"Umsatzsteuer:",
+            "text": "Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE343665625"
+        },
+        {
+            "title":"Aufsichtsbehörde:",
+            "text": "Industrie- und Handelskammer (IHK) - Region Heilbronn-Franken, Ferdinand-Braun-Straße 20, 74074 Heilbronn"
+        },
+        {
+            "title":"Für den Inhalt verantwortlich nach § 55 Abs. 2 RStV:",
+            "text": "benSem services GmbH, Johanniterstr. 5, 74177 Bad Friedrichshall"
+        },
+        {
+            "title":"Streitschlichtung:",
+            "text": "Gemäß Streitschlichtungsrichtlinie der EU wird hiermit auf die EU Streitschlichtung hingewiesen: https://ec.europa.eu/consumers/odr"
+        },
+        {
+            "title":"Haftung (Inhalte)",
+            "text": "Es gilt das Telemediengesetz (TMG) gemäß §§ 7 - 10. Für die eigenen Inhalte sind wir als Dienstleister verantwortlich. - Wir sind stets bemüht die Rechte Dritter zu wahren. Im Falle einer Rechtsverletzung, wird diese unverzüglich nach Bekanntwerden entfernt."
+        },
+        {
+            "title":"Haftung (Links)",
+            "text": "Für Webseiten Dritter kann keine Gewähr übernommen werden. Für die Inhalte der Webweiten Dritter ist stets der jeweilige Autor verantwortlich. - Wir sind stets bemüht die Rechte Dritter zu wahren. Im Falle einer Rechtsverletzung, wird diese unverzüglich nach Bekanntwerden entfernt."
+        },
+        {
+            "title":"Urheberrecht",
+            "text": "Die Inhalte und Werke auf diesen Seiten unterliegen dem Urheberrecht. Die Verbreitung, Vervielfältigung und Weiterbearbeitung bedürfen der schriftlichen Zustimmung des Betreibers bzw. Autors. Für den nicht kommerziellen bzw. privaten Gebrauch ist eine Weiterverbreitung gestattet. - Wir sind stets bemüht die Rechte Dritter zu wahren. Im Falle einer Rechtsverletzung, wird diese unverzüglich nach Bekanntwerden entfernt."
+        }
+    ]
 }

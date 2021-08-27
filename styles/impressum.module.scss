@@ -1,0 +1,33 @@
+@use './variables/' as v;
+
+.pageContainer {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  color: v.$primary-color;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 95vh;
+  padding: 50px 15px;
+
+  @include v.for-big-tablets {
+    grid-column: 3/8;
+    grid-row: 2/-1;
+    padding: 100px 0;
+    max-height: 75vh;
+  }
+  h1 {
+    font-weight: 600;
+  }
+  .block {
+    margin: 40px 0;
+    @include v.for-big-tablets {
+      margin: 70px 0;
+    }
+    h3 {
+      margin: 5px 0;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}

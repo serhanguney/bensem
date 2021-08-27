@@ -3,6 +3,7 @@ import { useGlobalContext } from "../Context";
 import styles from "../styles/contact.module.scss";
 import { m } from "framer-motion";
 import Layout from "../components/Layout/Layout";
+import Button from "../components/Layout/Button";
 import content from "../content/index.json";
 
 export default function contact() {
@@ -43,6 +44,9 @@ export default function contact() {
         <p className={styles.location}>
           <span>Johanniterstr. 5 74177 Bad Friedrichshall Germany</span>
         </p>
+      </m.div>
+      <m.div className={styles.impressum} variants={variants} custom={-1}>
+        <Button text="Impressum" />
       </m.div>
     </Layout>
   );
